@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 const Weekly = () => {
   return (
-    <div>Weekly</div>
+    <div className="weekly__container">Weekly</div>
   )
 }
 

@@ -2,7 +2,7 @@ import { IonCol, IonGrid, IonHeader,  IonRow,  IonTitle, IonToolbar } from '@ion
 
 const Header = () => {
   return (
-    <IonHeader>
+    <IonHeader color="tertiary">
     <IonToolbar>
 <IonGrid>
     <IonRow>

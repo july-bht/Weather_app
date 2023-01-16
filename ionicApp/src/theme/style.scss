@@ -1,21 +1,96 @@
-.forecast-container{
-    position: relative;
-    width: 100vw;
-    height: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.hourly{
-    background-color: red;
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    z-index: 10;
+#header {
+  position: fixed;
+  position: absolute;
 }
 
-.weekly{
-    background-color: blue;
+ion-grid {
+  padding: 0;
+  margin: 0;
+}
+
+ion-col {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.t {
+  font-family: "Lato", sans-serif;
+}
+
+#forecast{
+    position: fixed;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
+    bottom: 0;
+    
+    }
+    
+    .forecast-container{
+        position: relative;
+    }
+
+.hourly {
+  &__title {
+    position: absolute;
+    padding: 20px 0 0 60px;
+    color: black;
+  }
+  &__wave{
+    margin-bottom: -20px;
+  }
+}
+
+// .weekly {
+//   background-color: blue;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 5;
+//   margin: 0 30px 0 0;
+
+//   &__container {
+//     position: relative;
+//   }
+
+//   &__title {
+//   }
+// }
+
+.number {
+  font-size: 100px;
+  text-align: right;
+  font-weight: 600;
+  
+}
+
+.c {
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.icon {
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.degree {
+
+  padding-top: 50px;
+
+  &__container {
+    margin: 0 auto;
+    width: 200px;
+  }
+  &__col {
+    padding-top: 20px;
+  }
 }

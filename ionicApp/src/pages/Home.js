@@ -1,20 +1,42 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import Header from '../components/Header';
-import Forecasts from '../components/Forecasts';
-import Degrees from '../components/Degrees';
+import { IonContent, IonFooter, IonHeader, IonPage } from "@ionic/react";
+import Header from "../components/Header";
+import Forecasts from "../components/Forecasts";
+import Degrees from "../components/Degrees";
 
 const Home = () => {
   return (
-    <IonPage>
+    <IonPage  color="tertiary">
+
+
+{/* <IonHeader>
+  shjsh
+</IonHeader>
+
+<IonContent>
+  jijk
+</IonContent>
+
+<IonFooter>
+  xss
+</IonFooter>
+{/*      */}
    
-      <IonContent fullscreen>
-        <Header />
+  
+          
+       
+    
+<IonContent class="container"  color="tertiary"  fullscreen>
+<Header />
+    <Degrees />
+    <Forecasts />
+</IonContent>
 
-        <Degrees />
+  
 
-        <Forecasts />
+     
  
-      </IonContent>
+
+     
     </IonPage>
   );
 };

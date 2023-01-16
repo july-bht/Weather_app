@@ -1,22 +1,25 @@
 import "../theme/style.scss";
-import { IonCol, IonGrid, IonRow } from "@ionic/react";
+import { IonCol, IonGrid, IonRow, IonFooter } from "@ionic/react";
 import Hourly from "./Hourly";
 import Weekly from "./Weekly"
 
 const Forecasts = () => {
   return (
-    <div>
-        <IonGrid>
+
+        <IonGrid id="forecast" class="">
             <IonRow class="forecast-container">
                 <IonCol class="hourly">
                     <Hourly />
+         
+               
+
                 </IonCol>
-                <IonCol class="weekly">
+                {/* <IonCol class="weekly">
                     <Weekly />
-                </IonCol>
+                </IonCol> */}
             </IonRow>
         </IonGrid>
-    </div>
+
   )
 }
 
