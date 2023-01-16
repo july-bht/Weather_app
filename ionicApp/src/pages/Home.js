@@ -5,38 +5,12 @@ import Degrees from "../components/Degrees";
 
 const Home = () => {
   return (
-    <IonPage  >
-
-
-{/* <IonHeader>
-  shjsh
-</IonHeader>
-
-<IonContent>
-  jijk
-</IonContent>
-
-<IonFooter>
-  xss
-</IonFooter>
-{/*      */}
-   
-  
-          
-       
-    
-<IonContent class="container"  fullscreen>
-<Header />
-    <Degrees />
-    <Forecasts />
-</IonContent>
-
-  
-
-     
- 
-
-     
+    <IonPage>
+      <IonContent class="container" fullscreen>
+        <Header />
+        <Degrees />
+        <Forecasts />
+      </IonContent>
     </IonPage>
   );
 };

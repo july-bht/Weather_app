@@ -1,5 +1,6 @@
-import { IonCol, IonContent, IonGrid, IonRow, IonText } from "@ionic/react";
+import { IonCol, IonGrid, IonRow, IonText } from "@ionic/react";
 
+import Cloud from "../svg/cloud"
 const Degrees = () => {
   return (
     <IonGrid class="degree">
@@ -8,7 +9,9 @@ const Degrees = () => {
         <IonCol class="t degree__col">
           <IonText class="c">°C</IonText>
           <br />
-          <IonText class="icon">ico </IonText>
+          <IonText class="icon">
+        <Cloud />
+          </IonText>
         </IonCol>
       </IonRow>
     </IonGrid>
