@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
-.container {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-#header {
-  position: fixed;
-  position: absolute;
+ion-content {
+  --background: url(../../public/assets/bg.jpg) no-repeat center/cover fixed;
 }
 
 ion-grid {
@@ -21,22 +13,37 @@ ion-col {
   margin: 0;
 }
 
-
-
 .t {
   font-family: "Lato", sans-serif;
 }
 
-#forecast{
-    position: fixed;
-    position: absolute;
-    bottom: 0;
-    
-    }
-    
-    .forecast-container{
-        position: relative;
-    }
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+// HEADER
+#header {
+  position: fixed;
+  position: absolute;
+}
+ion-toolbar {
+  --background: #19422d00;
+  --color: white;
+}
+//
+
+// FORECAST
+#forecast {
+  position: fixed;
+  position: absolute;
+  bottom: 0;
+}
+
+.forecast-container {
+  position: relative;
+}
 
 .hourly {
   &__title {
@@ -44,7 +51,7 @@ ion-col {
     padding: 20px 0 0 60px;
     color: black;
   }
-  &__wave{
+  &__wave {
     margin-bottom: -20px;
   }
 }
@@ -65,25 +72,8 @@ ion-col {
 //   }
 // }
 
-.number {
-  font-size: 100px;
-  text-align: right;
-  font-weight: 600;
-  
-}
-
-.c {
-  font-weight: 800;
-  font-size: 40px;
-}
-
-.icon {
-  font-weight: 300;
-  font-size: 40px;
-}
-
 .degree {
-
+  color: white;
   padding-top: 50px;
 
   &__container {
@@ -93,4 +83,20 @@ ion-col {
   &__col {
     padding-top: 20px;
   }
+}
+
+.number {
+  font-size: 110px;
+  text-align: right;
+  font-weight: 500;
+}
+
+.c {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.icon {
+  font-weight: 300;
+  font-size: 40px;
 }

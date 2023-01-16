@@ -5,7 +5,7 @@ import Degrees from "../components/Degrees";
 
 const Home = () => {
   return (
-    <IonPage  color="tertiary">
+    <IonPage  >
 
 
 {/* <IonHeader>
@@ -25,7 +25,7 @@ const Home = () => {
           
        
     
-<IonContent class="container"  color="tertiary"  fullscreen>
+<IonContent class="container"  fullscreen>
 <Header />
     <Degrees />
     <Forecasts />
