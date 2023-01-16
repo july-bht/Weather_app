@@ -4,44 +4,51 @@ import axios from "axios";
 import Moment from "react-moment";
 import "moment-timezone";
 import "moment/locale/da";
-
-import { IonCol, IonGrid, IonRow } from "@ionic/react";
+const coords = {
+  latitude: "56.162939",
+  longitude: "10.203921",
+};
+import { IonHeader, IonCol, IonGrid, IonRow } from "@ionic/react";
+import { fetchOnecall, fetchWeather } from "./peter";
 
 export default function Fetch() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+  const [data, setData] = useState();
+  const [dataWeather, setdataWeather] = useState();
   useEffect(() => {
-    axios(
-      "https://api.openweathermap.org/data/2.5/onecall?lat=56.162939&lon=10.203921&exclude={current,minutely,hourly,alert}s&units=metric&appid=f11de31b3e7edcf4b58d82fce8ce5d85"
-    )
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((error) => {
-        setError(error);
-      })
-      .finally(() => {
-        setLoading(false);
+    if (coords) {
+      fetchOnecall(coords).then((data) => {
+        console.log("data-Onecall", data);
+        setData(data);
       });
+      fetchWeather(coords).then((data) => {
+        console.log("data-weather", data);
+        setdataWeather(data);
+      });
+    }
   }, []);
 
   return (
-    <IonGrid>
-      <IonRow>
-        {data &&
-          data.daily.map((data, dataItem) => (
-            <div  key={dataItem}>
-              <IonCol>
-                <Moment unix format="dddd">
-                  {data.dt}
-                </Moment>
-              </IonCol>
-              <IonCol>{Math.round(data.temp.day)}&#176;</IonCol>
-            </div>
-          ))}
-      </IonRow>
-    </IonGrid>
+    <>
+      {data && dataWeather && (
+        <>
+          <IonHeader>{dataWeather.name}</IonHeader>
+          <IonGrid>
+            <IonRow>
+              {data &&
+                data.daily.map((data, dataItem) => (
+                  <div key={dataItem}>
+                    <IonCol>
+                      <Moment unix format="dddd">
+                        {data.dt}
+                      </Moment>
+                    </IonCol>
+                    <IonCol>{Math.round(data.temp.day)}&#176;</IonCol>
+                  </div>
+                ))}
+            </IonRow>
+          </IonGrid>
+        </>
+      )}
+    </>
   );
 }
