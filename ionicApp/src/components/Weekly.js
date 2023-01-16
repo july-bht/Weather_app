@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Weekly = () => {
-  return (
-    <div>Weekly</div>
-  )
-}
+  return <div>Weekly</div>;
+};
 
-export default Weekly
+export default Weekly;
