@@ -1,22 +1,117 @@
-.forecast-container{
-    position: relative;
-    width: 100vw;
-    height: 100px;
-    bottom: 0;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+ion-content {
+  --background: url(../../public/assets/bg.jpg) no-repeat center/cover fixed;
+  // overwrite inline styles
+
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
 }
 
-.hourly{
-    background-color: red;
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    z-index: 10;
+ion-grid {
+  padding: 0;
+  margin: 0;
 }
 
-.weekly{
-    background-color: blue;
+ion-col {
+  padding: 0;
+  margin: 0;
+}
+
+.t {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+// HEADER
+#header {
+  position: fixed;
+  position: absolute;
+}
+ion-toolbar {
+  --background: #19422d00;
+  --color: white;
+}
+
+.header {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-weight: 600;
+  }
+}
+//
+
+// FORECAST
+#forecast {
+  position: fixed;
+  position: absolute;
+  bottom: 0;
+}
+
+.forecast-container {
+  position: relative;
+}
+
+.hourly {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
+  &__title {
+    position: absolute;
+    padding: 10px 0 0 60px;
+    color: black;
+
+  }
+  &__wave {
+    margin-bottom: -20px;
+  }
+}
+
+.weekly {
+ opacity: 85%;
+  
+  &__title {
+  position: absolute;
+  padding: 10px 70px 0 0 ;
+  right: 0;
+  }
+  &__wave {
+    margin-bottom: -20px;
+  }
+
+
+
+}
+
+.degree {
+  color: white;
+  padding-top: 40px;
+
+  &__container {
+    margin: 0 auto;
+    width: 200px;
+  }
+  &__col {
+    padding-top: 20px;
+  }
+}
+
+.number {
+  font-size: 110px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.c {
+  font-weight: 800;
+  font-size: 40px;
 }

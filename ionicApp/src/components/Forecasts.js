@@ -1,23 +1,40 @@
 import "../theme/style.scss";
-import { IonCol, IonGrid, IonRow } from "@ionic/react";
+import {
+  IonCol,
+  IonGrid,
+  IonRow,
+  IonList,
+  IonContent,
+  IonModal,
+  IonButton,
+  IonText,
+} from "@ionic/react";
 import Hourly from "./Hourly";
-import Weekly from "./Weekly"
+import Weekly from "./Weekly";
+import React, { useState } from "react";
 
 const Forecasts = () => {
-  return (
-    <div>
-        <IonGrid>
-            <IonRow class="forecast-container">
-                <IonCol class="hourly">
-                    <Hourly />
-                </IonCol>
-                <IonCol class="weekly">
-                    <Weekly />
-                </IonCol>
-            </IonRow>
-        </IonGrid>
-    </div>
-  )
-}
+//   const [showModal, setShowModal] = useState(false);
 
-export default Forecasts
+
+  return (
+    <>
+
+    
+<IonGrid id="forecast" class="">
+  <IonRow class="forecast-container">
+    <IonCol class="hourly" >
+      <Hourly />
+    </IonCol>
+    <IonCol class="weekly">
+      <Weekly />
+    </IonCol>
+  </IonRow>
+</IonGrid>
+    </>
+  );
+};
+
+export default Forecasts;
+
+

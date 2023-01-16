@@ -21,11 +21,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import './theme/style.scss'
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
+  <IonApp >
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/home">

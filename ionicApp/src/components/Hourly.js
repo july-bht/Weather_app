@@ -1,9 +1,11 @@
-import React from 'react'
-
+import HourWave from "../svg/hourWave";
 const Hourly = () => {
   return (
-    <div>Hourly</div>
-  )
-}
+    <>
+      <h4 className="hourly__title">Hourly</h4>
+      <HourWave />
+    </>
+  );
+};
 
-export default Hourly
+export default Hourly;

@@ -1,27 +1,21 @@
-import { IonCol, IonGrid, IonRow } from '@ionic/react'
-import React from 'react'
+import { IonCol, IonGrid, IonRow, IonText } from "@ionic/react";
 
+import Cloud from "../svg/cloud"
 const Degrees = () => {
   return (
-    <div>
-        <IonGrid>
-            <IonRow>
-                <IonCol>
-19
-                </IonCol>
+    <IonGrid class="degree">
+      <IonRow class="degree__container">
+        <IonCol class=" number t">19</IonCol>
+        <IonCol class="t degree__col">
+          <IonText class="c">°C</IonText>
+          <br />
+          <IonText class="icon">
+        <Cloud />
+          </IonText>
+        </IonCol>
+      </IonRow>
+    </IonGrid>
+  );
+};
 
-                <IonRow>
-                    <IonCol>
-0
-                    </IonCol>
-                    <IonCol>
-icon
-                    </IonCol>
-                </IonRow>
-            </IonRow>
-        </IonGrid>
-    </div>
-  )
-}
-
-export default Degrees
+export default Degrees;

@@ -1,8 +1,12 @@
-import React from 'react'
+import WeekWave from "../svg/weekWave"
+
 
 const Weekly = () => {
   return (
-    <div>Weekly</div>
+    <>
+    <h4 className="weekly__title">weekly</h4>
+    <WeekWave />
+  </>
   )
 }
 
