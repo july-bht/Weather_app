@@ -1,7 +1,8 @@
 import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 
 import Home from "./pages/Home";
-
+import Fetch from "./components/Fetch";
+import Location from "./components/Location";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -22,7 +23,10 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 
 setupIonicReact();
-  
-const App = () => <IonApp></IonApp>;
+
+const App = () => <IonApp>
+  <Fetch/>
+  <Location/>
+</IonApp>;
 
 export default App;

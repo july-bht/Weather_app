@@ -1,4 +1,11 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+import Moment from "react-moment";
+import "moment-timezone";
+import "moment/locale/da";
+
+import { IonCol, IonGrid, IonRow } from "@ionic/react";
 
 export default function Fetch() {
   const [data, setData] = useState(null);
@@ -20,7 +27,21 @@ export default function Fetch() {
       });
   }, []);
 
-  if (loading) return "Loading...";
-  if (error) return "Error";
-  return <div>Fetch</div>;
+  return (
+    <IonGrid>
+      <IonRow>
+        {data &&
+          data.daily.map((data, dataItem) => (
+            <div  key={dataItem}>
+              <IonCol>
+                <Moment unix format="dddd">
+                  {data.dt}
+                </Moment>
+              </IonCol>
+              <IonCol>{Math.round(data.temp.day)}&#176;</IonCol>
+            </div>
+          ))}
+      </IonRow>
+    </IonGrid>
+  );
 }
