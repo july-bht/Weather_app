@@ -3,7 +3,7 @@ import React from "react";
 const WeekWave = () => {
   return (
     <svg
-      className="__wave"
+      className="weekly__wave"
       width="390"
       height="254"
       viewBox="0 0 390 254"

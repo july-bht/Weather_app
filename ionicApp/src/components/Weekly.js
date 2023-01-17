@@ -1,13 +1,15 @@
-
-import WeekWave from "../svg/weekWave"
-
+import { IonText } from "@ionic/react";
+import WeekWave from "../svg/weekWave";
 
 const Weekly = () => {
   return (
-    <>
-    <WeekWave />
-  </>
-  )
-}
+    <div className="wave">
+      <WeekWave />
+      <div className="wave__content">
+        {/* her skal informationen være */}
+      </div>
+    </div>
+  );
+};
 
 export default Weekly;
