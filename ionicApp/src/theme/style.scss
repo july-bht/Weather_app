@@ -9,7 +9,7 @@ ion-content {
     display: none;
   }
 }
-// 
+//
 
 // ION CLASSES
 ion-grid {
@@ -23,10 +23,10 @@ ion-col {
 }
 
 ion-toolbar {
-    --background: #19422d00;
-    --color: white;
-  }
-//   
+  --background: #19422d00;
+  --color: white;
+}
+//
 
 .t {
   font-family: "Lato", sans-serif;
@@ -43,7 +43,6 @@ ion-toolbar {
   position: fixed;
   position: absolute;
 }
-
 
 .header {
   &__row {
@@ -70,10 +69,10 @@ ion-toolbar {
     font-size: 16px;
     font-weight: 400;
     z-index: 100;
+    cursor: pointer;
   }
   &__wave {
     margin-bottom: -30px;
- 
   }
 }
 
@@ -85,12 +84,13 @@ ion-toolbar {
     font-size: 16px;
     font-weight: 400;
     z-index: 100;
+    cursor: pointer;
   }
   &__wave {
     margin-bottom: -30px;
   }
 }
-// 
+//
 
 .degree {
   color: white;
@@ -117,20 +117,27 @@ ion-toolbar {
 }
 
 .active {
+    animation: click 10s ease-in
+}
+    @keyframes click{
+0%{
+    opacity: 0;
 }
 
-
-.wave{
-    position: relative;
-    &__content{
-        position: absolute;
-        height: 50px;
-        width: 100vw;
-  
-        left: 0;
-        padding: 80px 10px 10px 10px;
-
+100%{
+    opacity: 1;
+}
     }
-   
-}
 
+
+
+.wave {
+  position: relative;
+  &__content {
+    position: absolute;
+    height: 50px;
+    width: 100vw;
+    left: 0;
+    padding: 80px 10px 10px 10px;
+  }
+}
