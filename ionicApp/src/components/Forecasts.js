@@ -11,6 +11,7 @@ import {
 } from "@ionic/react";
 import Hourly from "./Hourly";
 import Weekly from "./Weekly";
+
 import React, { useState } from "react";
 
 const Forecasts = () => {

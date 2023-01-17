@@ -1,3 +1,4 @@
+
 import WeekWave from "../svg/weekWave"
 
 
@@ -10,4 +11,4 @@ const Weekly = () => {
   )
 }
 
-export default Weekly
+export default Weekly;

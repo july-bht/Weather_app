@@ -1,8 +1,10 @@
+
 import { IonCol, IonGrid, IonRow, IonText } from "@ionic/react";
 
 import Cloud from "../svg/cloud"
 const Degrees = () => {
   return (
+
     <IonGrid class="degree">
       <IonRow class="degree__container">
         <IonCol class=" number t">19</IonCol>

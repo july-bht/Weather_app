@@ -1,3 +1,4 @@
+
 import HourWave from "../svg/hourWave";
 const Hourly = () => {
   return (
@@ -6,6 +7,8 @@ const Hourly = () => {
       <HourWave />
     </>
   );
+
+
 };
 
 export default Hourly;
