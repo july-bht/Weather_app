@@ -5,28 +5,33 @@ import { fetchOnecall, fetchWeather } from "./peter";
 import { Geolocation } from "@capacitor/geolocation";
 
 export default function Fetch() {
-  const [myPosition, setMyPosition] = useState(null);
-
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [myPosition, setMyPosition] = useState();
   useEffect(() => {
-    async () => {
+    (async () => {
       try {
         const coordinates = await Geolocation.getCurrentPosition();
+        console.log(coordinates.coords);
         setMyPosition(coordinates.coords);
+        console.log(myPosition);
       } catch (error) {
         console.error("Error fetching data: ", error);
+        setError(error);
+      } finally {
+        setLoading(false);
       }
-    };
+    })();
     if (myPosition) {
       // forudsigt
-      fetchOnecall(myPosition).then((data) => {
+      fetchOnecall([myPosition.latitude, myPosition.longitude]).then((data) => {
         setData(data);
       });
       // nuværende
-      fetchWeather(myPosition).then((data) => {
+      fetchWeather([myPosition.latitude, myPosition.longitude]).then((data) => {
         setdataWeather(data);
       });
     }
-    console.log();
   }, []);
 
   const [data, setData] = useState([]);
