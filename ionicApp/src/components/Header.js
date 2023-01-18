@@ -7,15 +7,26 @@ import {
   IonToolbar,
 } from "@ionic/react";
 
-const Header = () => {
+import { useEffect, useState } from "react";
+const Header = ({ data1, data2 }) => {
+  const locationName = data2.name;
+  console.log("PROPHEADER", data1);
+  console.log("PROPHEADER1", data2);
+  console.log("propNAme", data2.name);
+
+  function currentDate(time) {
+    return new Date(time * 1000).toLocaleDateString([], "da-DK");
+  }
+
   return (
 
     <IonHeader  className="ion-no-border" collapse="fade">
       <IonToolbar>
         <IonGrid>
           <IonRow className="header__row t">
-            <IonCol size="auto">GRENAA</IonCol>
-            <IonCol size="auto">27. Jan</IonCol>
+
+            <IonCol size="auto">{locationName}</IonCol>
+            <IonCol size="auto">{data2 && currentDate(data2.dt)}</IonCol>
 
           </IonRow>
         </IonGrid>
