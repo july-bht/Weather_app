@@ -117,58 +117,37 @@ ion-toolbar {
 }
 
 .active {
-  animation: click 10s ease-in;
+    animation: click 10s ease-in
 }
-@keyframes click {
-  0% {
+    @keyframes click{
+0%{
     opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
+
+100%{
+    opacity: 1;
+}
+    }
+
+
 
 .wave {
   position: relative;
 
   &__content {
     position: absolute;
-    height: 300px;
-    width: 500px;
-    overflow-x: scroll;
+    height: 50px;
+    width: 100vw;
     left: 0;
-    top: 0;
-    padding: 90px 10px 10px 10px;
-    background-color: rgba(255, 0, 0, 0.176);
+    padding: 80px 10px 10px 10px;
+    background-color: red;
   }
 }
 
-.box {
-  height:max-content;
-  width: max-content;
-  background-color: rgba(0, 0, 0, 0.14);
-padding: 10px;
-  text-align: center;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  flex-direction: column;
 
-  &__grid {
-    overflow-x: scroll;
-    width: 500px;
-  }
 
-  &__row {
-    display: flex;
-    justify-content: center;
-    gap: 1px;
-    overflow-x: scroll;
-  }
-
-  &__col {
-    text-align: center;
-  }
+.box{
+  height: 50px;
+  width: 50px;
+  background-color: gray;
 }
