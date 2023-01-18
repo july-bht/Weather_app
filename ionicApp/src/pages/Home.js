@@ -4,6 +4,7 @@ import Forecasts from "../components/Forecasts";
 import Degrees from "../components/Degrees";
 
 const Home = () => {
+  
   return (
     <IonPage>
       <IonContent class="container" fullscreen>

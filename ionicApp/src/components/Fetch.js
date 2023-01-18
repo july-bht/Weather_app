@@ -4,13 +4,13 @@ import { fetchOnecall, fetchWeather } from "./peter";
 
 import { Geolocation } from "@capacitor/geolocation";
 
-import { IonLoading } from "@ionic/react";
-
 export default function Fetch() {
   const [position, setPosition] = useState();
   const [data, setData] = useState([]);
+  
   const [dataWeather, setdataWeather] = useState();
   const [dataFetched, setDataFetched] = useState(false)
+ 
   const [lat, setLat] = useState("")
   const [lon, setLon] = useState("")
 

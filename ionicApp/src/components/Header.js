@@ -13,13 +13,15 @@ const Header = () => {
   function currentDate(time) {
     return new Date(time * 1000).toLocaleDateString([], "da-DK");
   }
+
+  console.log("Fetch", Fetch);
   return (
     <IonHeader className="ion-no-border" collapse="fade">
       <IonToolbar>
         <IonGrid>
           <IonRow className="header__row t">
-            <IonCol size="auto">{getData && getData[1].name}</IonCol>
-            <IonCol size="auto">{getData && currentDate(getData[1].dt)}</IonCol>
+            {/* <IonCol size="auto">{getData && getData[1].name}</IonCol>
+            <IonCol size="auto">{getData && currentDate(getData[1].dt)}</IonCol> */}
           </IonRow>
         </IonGrid>
       </IonToolbar>
