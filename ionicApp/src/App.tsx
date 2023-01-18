@@ -2,7 +2,7 @@
 import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 
 import Home from "./pages/Home";
-import Fetch from "./components/Fetch";
+// import Fetch from "./components/Fetch";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 import {IonReactRouter} from '@ionic/react-router';
