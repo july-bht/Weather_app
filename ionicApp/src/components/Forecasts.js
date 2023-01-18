@@ -14,7 +14,7 @@ import Weekly from "./Weekly";
 
 import React, { useState } from "react";
 
-const Forecasts = () => {
+const Forecasts = (data1, data2) => {
   const [activeTab, setActiveTab] = useState("hourly");
   
   return (
@@ -39,7 +39,7 @@ const Forecasts = () => {
       </IonText>
 
 
-        {activeTab === "hourly" && <Hourly />}
+        {activeTab === "hourly" && <Hourly  data1={data1} data2={data2}/>}
         {activeTab === "weekly" && <Weekly />}
 
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { fetchOnecall, fetchWeather } from "./peter";
+import { fetchOnecall, fetchWeather } from "./API";
 
 import { Geolocation } from "@capacitor/geolocation";
 
