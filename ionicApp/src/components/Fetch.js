@@ -1,6 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
+import Moment from "react-moment";
+import "moment-timezone";
+import "moment/locale/da";
+const coords = {
+  latitude: "56.162939",
+  longitude: "10.203921",
+};
+import { IonHeader, IonCol, IonGrid, IonRow } from "@ionic/react";
 import { fetchOnecall, fetchWeather } from "./peter";
+
 
 import { Geolocation } from "@capacitor/geolocation";
 
@@ -23,31 +33,43 @@ export default function Fetch() {
   }
 
 
+
+
   useEffect(() => {
-    getCoords()
-    if(dataFetched) {
-        // forudsigt
-      console.log("coords", position.coords.latitude);
-      console.log("coords", position.coords.longitude);
-  
-if(lat && lon) {
-  fetchOnecall(lat, lon).then((data) => {
-    console.log("data-Onecall", data);
-
-    setData(data);
-  });
-  // nuværende
-  fetchWeather(lat, lon).then((data) => {
-    setdataWeather(data);
-    console.log("data-Weather", data);
-  });
-}
+    if (coords) {
+      fetchOnecall(coords).then((data) => {
+        console.log("data-Onecall", data);
+        setData(data);
+      });
+      fetchWeather(coords).then((data) => {
+        console.log("data-weather", data);
+        setdataWeather(data);
+      });
     }
-    console.log("dataFetched", dataFetched);
-  }, [dataFetched]);
+  }, []);
 
-
-  return [data, dataWeather];
+  return (
+    <>
+      {data && dataWeather && (
+        <>
+          <IonHeader>{dataWeather.name}</IonHeader>
+          <IonGrid>
+            <IonRow>
+              {data &&
+                data.daily.map((data, dataItem) => (
+                  <div key={dataItem}>
+                    <IonCol>
+                      <Moment unix format="dddd">
+                        {data.dt}
+                      </Moment>
+                    </IonCol>
+                    <IonCol>{Math.round(data.temp.day)}&#176;</IonCol>
+                  </div>
+                ))}
+            </IonRow>
+          </IonGrid>
+        </>
+      )}
+    </>
+  );
 }
-
-

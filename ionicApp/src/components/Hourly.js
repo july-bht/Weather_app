@@ -10,10 +10,11 @@ const Hourly = () => {
         <IonGrid className="box__grid">
           <IonRow className="box__row">
             {data.hourly.map((item, index) => (
-              <IonCol key={index}>
-                <div className="box t">
+              <IonCol className="t box__col" key={index}>
+                <div className="box ">
                   <IonText className="box__deg">{item.deg}</IonText>
-                  <div className="box__icon">{item.icon}</div>
+ 
+                  <img  className="box__icon" src={item.icon} />
                 </div>
                 <IonText className="box__time">{item.time}</IonText>
               </IonCol>
