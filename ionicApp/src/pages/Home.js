@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IonContent, IonFooter, IonHeader, IonPage } from "@ionic/react";
+import { IonContent, IonFooter, IonHeader, IonPage, IonLoading } from "@ionic/react";
 import Header from "../components/Header";
 import Forecasts from "../components/Forecasts";
 import Degrees from "../components/Degrees";
@@ -17,6 +17,10 @@ const Home = () => {
  
   const [lat, setLat] = useState("")
   const [lon, setLon] = useState("")
+
+  const [loading, setLoading] = useState(true);
+  const [showLoading, setShowLoading] = useState(true);
+
 
   const getCoords = async () => {
    const c = await Geolocation.getCurrentPosition();
@@ -49,6 +53,17 @@ if(lat && lon) {
     }
     console.log("dataFetched", dataFetched);
   }, [dataFetched]);
+  // if (loading)
+  // return (
+  //   <IonLoading
+  //   showBackdrop={true}
+  //     spinner={"bubbles"}
+  //     isOpen={showLoading}
+  //     onDidDismiss={() => setShowLoading(false)}
+  //     message={"Vent lige lidt..."}
+  //     duration={2000}
+  //   />
+  // );
   return (
     <IonPage>
       <IonContent class="container" fullscreen>
