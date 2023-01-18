@@ -1,0 +1,39 @@
+{
+  "hourly": [
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    }
+  ]
+}

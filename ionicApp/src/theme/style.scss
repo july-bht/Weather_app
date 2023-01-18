@@ -133,11 +133,21 @@ ion-toolbar {
 
 .wave {
   position: relative;
+
   &__content {
     position: absolute;
     height: 50px;
     width: 100vw;
     left: 0;
     padding: 80px 10px 10px 10px;
+    background-color: red;
   }
+}
+
+
+
+.box{
+  height: 50px;
+  width: 50px;
+  background-color: gray;
 }
