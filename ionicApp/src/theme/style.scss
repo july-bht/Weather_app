@@ -140,21 +140,21 @@ ion-toolbar {
     left: 0;
     top: 0;
     padding: 90px 10px 10px 10px;
-    background-color: rgba(255, 0, 0, 0.176);
   }
 }
 
 .box {
-  height:max-content;
+  height: max-content;
   width: max-content;
-  background-color: rgba(0, 0, 0, 0.14);
-padding: 10px;
+  background-color: rgba(0, 0, 0, 0.033);
+  padding: 10px;
   text-align: center;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
   gap: 5px;
   flex-direction: column;
+  border-radius: 3px;
 
   &__grid {
     overflow-x: scroll;

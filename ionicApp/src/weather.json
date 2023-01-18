@@ -2,37 +2,37 @@
   "hourly": [
     {
       "deg": "13°",
-      "icon": "icon",
+      "icon": "/public/assets/icons/cloud.png",
       "time": "13:00"
     },
     {
       "deg": "13°",
-      "icon": "icon",
+      "icon": "/public/assets/icons/cloud.png",
       "time": "13:00"
     },
     {
       "deg": "13°",
-      "icon": "icon",
+      "icon": "/public/assets/icons/cloud.png",
       "time": "13:00"
     },
     {
       "deg": "13°",
-      "icon": "icon",
+      "icon": "/public/assets/icons/cloud.png",
       "time": "13:00"
     },
     {
       "deg": "13°",
-      "icon": "icon",
+      "icon": "/public/assets/icons/cloud.png",
       "time": "13:00"
     },
     {
       "deg": "13°",
-      "icon": "icon",
+      "icon": "/public/assets/icons/cloud.png",
       "time": "13:00"
     },
     {
       "deg": "13°",
-      "icon": "icon",
+      "icon": "/public/assets/icons/cloud.png",
       "time": "13:00"
     }
   ],
@@ -40,23 +40,23 @@
   "backgrounds":{
     "rainy":{
       "img":"/public/assets/backgrounds/rainy.png",
-      "color":"dark-blue",
-      "icon":"rain"
+      "color":"rainy",
+      "icon":"/public/assets/icons/rain.png"
     },
     "sunny":{
-      "img":"/public/assets/backgrounds/rainy.png",
-      "color":"green",
-      "icon":"sun"
+      "img":"/public/assets/backgrounds/sunny.png",
+      "color":"sunny",
+      "icon":"/public/assets/icons/sun.png"
     },
     "cloudy":{
-      "img":"/public/assets/backgrounds/rainy.png",
-      "color":"purple",
-      "icon":"cloud"
+      "img":"/public/assets/backgrounds/cloudy.png",
+      "color":"cloudy",
+      "icon":"/public/assets/icons/cloud.png"
     },
-    "rainy-sunny":{
-      "img":"/public/assets/backgrounds/rainy.png",
-      "color":"light-blue",
-      "icon":"sunny-cloud"
+    "cloudy-sunny":{
+      "img":"/public/assets/backgrounds/cloudy-sunny.png",
+      "color":"cloudy-sunny",
+      "icon":"/public/assets/icons/cloud-sun.png"
     }
   }
 }
