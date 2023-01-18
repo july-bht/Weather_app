@@ -1,4 +1,4 @@
-import {RecoilRoot} from "recoil"
+
 import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 
 import Home from "./pages/Home";
@@ -28,7 +28,6 @@ import "./theme/style.scss";
 setupIonicReact();
 
 const App: React.FC = () => (
-<RecoilRoot>
 <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
@@ -41,7 +40,6 @@ const App: React.FC = () => (
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
-</RecoilRoot>
 );
 
 export default App;
