@@ -15,14 +15,32 @@ import Weekly from "./Weekly";
 import React, { useState } from "react";
 
 const Forecasts = () => {
-//   const [showModal, setShowModal] = useState(false);
-
-
+  const [activeTab, setActiveTab] = useState("hourly");
   return (
-    <>
+    <div id="forecast">
+      <IonText
+        className={
+          activeTab === "hourly" ? "active hourly__title f " : "hourly__title f"
+        }
+        onClick={() => setActiveTab("hourly")}
+      >
+        Hourly
+      </IonText>
+      <IonText
+        className={
+          activeTab === "weekly" ? "active weekly__title f " : "weekly__title f"
+        }
+        onClick={() => setActiveTab("weekly")}
+      >
+        Weekly
+      </IonText>
 
-    
-<IonGrid id="forecast" class="">
+
+        {activeTab === "hourly" && <Hourly />}
+        {activeTab === "weekly" && <Weekly />}
+
+
+      {/* <IonGrid id="forecast" class="">
   <IonRow class="forecast-container">
     <IonCol class="hourly" >
       <Hourly />
@@ -31,11 +49,9 @@ const Forecasts = () => {
       <Weekly />
     </IonCol>
   </IonRow>
-</IonGrid>
-    </>
+</IonGrid> */}
+    </div>
   );
 };
 
 export default Forecasts;
-
-
