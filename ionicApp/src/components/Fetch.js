@@ -7,12 +7,9 @@ import { Geolocation } from "@capacitor/geolocation";
 import { IonLoading } from "@ionic/react";
 
 export default function Fetch() {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [position, setPosition] = useState();
   const [data, setData] = useState([]);
   const [dataWeather, setdataWeather] = useState();
-  const [showLoading, setShowLoading] = useState(true);
   const [dataFetched, setDataFetched] = useState(false)
   const [lat, setLat] = useState("")
   const [lon, setLon] = useState("")
