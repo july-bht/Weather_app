@@ -1,0 +1,63 @@
+{
+  "hourly": [
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    },
+    {
+      "deg": "13°",
+      "icon": "icon",
+      "time": "13:00"
+    }
+  ],
+
+  "backgrounds":{
+    "rainy":{
+      "img":"/public/assets/backgrounds/rainy.png",
+      "color":"dark-blue",
+      "icon":"rain"
+    },
+    "sunny":{
+      "img":"/public/assets/backgrounds/rainy.png",
+      "color":"green",
+      "icon":"sun"
+    },
+    "cloudy":{
+      "img":"/public/assets/backgrounds/rainy.png",
+      "color":"purple",
+      "icon":"cloud"
+    },
+    "rainy-sunny":{
+      "img":"/public/assets/backgrounds/rainy.png",
+      "color":"light-blue",
+      "icon":"sunny-cloud"
+    }
+  }
+}
+
