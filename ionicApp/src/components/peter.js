@@ -1,7 +1,7 @@
-export async function fetchOnecall(position) {
+export async function fetchOnecall([position]) {
   const functionCall =
     "https://api.openweathermap.org/data/2.5/onecall?" +
-    "lat=$" +
+    "lat=" +
     position.latitude +
     "&lon=" +
     position.longitude +
@@ -20,7 +20,7 @@ export async function fetchOnecall(position) {
 export async function fetchWeather(position) {
   const functionCall =
     "https://api.openweathermap.org/data/2.5/weather?" +
-    "lat=$" +
+    "lat=" +
     position.latitude +
     "&lon=" +
     position.longitude +
