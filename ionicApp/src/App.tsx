@@ -1,9 +1,10 @@
 import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
 
 import Home from "./pages/Home";
+import Fetch from "./components/Fetch";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
-import { IonReactRouter } from "@ionic/react-router";
+import {IonReactRouter} from '@ionic/react-router';
 import { Redirect, Route } from "react-router";
 
 /* Basic CSS for apps built with Ionic */
@@ -21,13 +22,13 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 
-import "./theme/variables.css";
-import "./theme/style.scss";
+import './theme/variables.css';
+import './theme/style.scss'
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
+  <IonApp >
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/home">
@@ -40,5 +41,6 @@ const App: React.FC = () => (
     </IonReactRouter>
   </IonApp>
 );
+
 
 export default App;

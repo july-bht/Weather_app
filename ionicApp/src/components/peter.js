@@ -1,11 +1,5 @@
-export async function fetchOnecall(lat, lon) {
-  const functionCall =
-    "https://api.openweathermap.org/data/2.5/onecall?" +
-    "lat=" +
-    lat +
-    "&lon=" +
-    lon +
-    "&exclude={part}&appid=f11de31b3e7edcf4b58d82fce8ce5d85&lang=da&units=metric";
+export async function fetchOnecall(props) {
+  const functionCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.latitude}&lon=${props.longitude}&exclude={part}&appid=48f427056d4654fc05c05c1e61a36c47&lang=da&units=metric`;
 
   try {
     const response = await fetch(functionCall);
@@ -17,14 +11,8 @@ export async function fetchOnecall(lat, lon) {
     console.log(`Fetch error: ${err.message}`);
   }
 }
-export async function fetchWeather(lat, lon) {
-  const functionCall =
-    "https://api.openweathermap.org/data/2.5/weather?" +
-    "lat=" +
-    lat +
-    "&lon=" +
-    lon +
-    "&exclude={part}&appid=7c1e023709c110c30ad9b960076d599c&lang=da&units=metric";
+export async function fetchWeather(props) {
+  const functionCall = `https://api.openweathermap.org/data/2.5/weather?lat=${props.latitude}&lon=${props.longitude}&exclude={part}&appid=48f427056d4654fc05c05c1e61a36c47&lang=da&units=metric`;
 
   try {
     const response = await fetch(functionCall);
