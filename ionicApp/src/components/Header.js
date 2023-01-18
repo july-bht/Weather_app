@@ -7,7 +7,6 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import { useEffect, useState } from "react";
-import Fetch from "./Fetch";
 const Header = ({ data1, data2 }) => {
   const locationName = data2.name;
   console.log("PROPHEADER", data1);
