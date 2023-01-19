@@ -7,6 +7,7 @@ ion-content {
   overflow: auto;
   &::-webkit-scrollbar {
     display: none;
+
   }
 }
 //
@@ -143,32 +144,45 @@ ion-toolbar {
   }
 }
 
+
 .box {
   height: max-content;
   width: max-content;
   background-color: rgba(0, 0, 0, 0.033);
   padding: 10px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 0px;
   flex-direction: column;
   border-radius: 3px;
 
   &__grid {
     overflow-x: scroll;
-    width: 500px;
+    width: 650px;
   }
 
   &__row {
     display: flex;
     justify-content: center;
-    gap: 1px;
-    overflow-x: scroll;
+    gap: 10px;
+
+    width: max-content;
   }
 
   &__col {
     text-align: center;
   }
+
+  &__deg{
+    font-size: 14px;
+  }
+
+  &__time{
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  
 }

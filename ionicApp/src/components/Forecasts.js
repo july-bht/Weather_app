@@ -14,8 +14,10 @@ import Weekly from "./Weekly";
 
 import React, { useState } from "react";
 
-const Forecasts = () => {
+const Forecasts = ({ data1, data2 }) => {
   const [activeTab, setActiveTab] = useState("hourly");
+
+  
   
   return (
     <div id="forecast">

@@ -1,12 +1,20 @@
 .rainy{
     color: #20203B;
+    --background: url(../../public/assets/backgrounds/rainy.png) no-repeat center/cover fixed;
+
 }
 .sunny{
     color: #233923;
+    --background: url(../../public/assets/backgrounds/sunny.png) no-repeat center/cover fixed;
+
 }
 .cloudy{
     color: #230E28;
+    --background: url(../../public/assets/backgrounds/cloudy.png) no-repeat center/cover fixed;
+
 }
 .cloudy-sunny{
     color: #2A3174;
+    --background: url(../../public/assets/backgrounds/cloudy-sunny.png) no-repeat center/cover fixed;
+
 }

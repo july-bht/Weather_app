@@ -10,9 +10,9 @@ import {
 import { useEffect, useState } from "react";
 const Header = ({ data1, data2 }) => {
   const locationName = data2.name;
-  console.log("PROPHEADER", data1);
-  console.log("PROPHEADER1", data2);
-  console.log("propNAme", data2.name);
+  // console.log("PROPHEADER", data1.hourly);
+  // console.log("PROPHEADER1", data2);
+  // console.log("propNAme", data2.name);
 
   function currentDate(time) {
     return new Date(time * 1000).toLocaleDateString([], "da-DK");
