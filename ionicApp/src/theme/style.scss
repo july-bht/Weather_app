@@ -2,7 +2,7 @@
 
 // BACKGROUND AND SCROLLBAR
 ion-content {
-  --background: url(../../public/assets/bg.png) no-repeat center/cover fixed;
+  --background: url(../../public/assets/backgrounds/neutral.png) no-repeat center/cover fixed;
   --overflow: hidden;
   overflow: auto;
   &::-webkit-scrollbar {
@@ -110,11 +110,16 @@ ion-toolbar {
   font-size: 110px;
   text-align: right;
   font-weight: 600;
+  padding-right: 5px;
 }
 
 .c {
   font-weight: 800;
   font-size: 40px;
+}
+
+.cloud-sun{
+  margin-top: -10px;
 }
 
 .active {
@@ -184,5 +189,15 @@ ion-toolbar {
     font-weight: 500;
   }
 
+  &__icon{
+    width: 40px;
+    height: auto;
+  }
+
   
+}
+
+.icon{
+  width: 65px;
+  height: auto;
 }

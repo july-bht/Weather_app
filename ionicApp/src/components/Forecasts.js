@@ -17,35 +17,37 @@ import React, { useState } from "react";
 const Forecasts = ({ data1, data2 }) => {
   const [activeTab, setActiveTab] = useState("hourly");
 
-  
-  
   return (
-    <div id="forecast">
-      <IonText
-      className="hourly__title f"
-        // className={
-        //   activeTab === "hourly" ? "active hourly__title f " : "hourly__title f"
-        // }
-        onClick={() => setActiveTab("hourly")}
-      >
-        Hourly
-      </IonText>
-      <IonText
-         className="weekly__title f"
-        // className={
-        //   activeTab === "weekly" ? "active weekly__title f " : "weekly__title f"
-        // }
-        onClick={() => setActiveTab("weekly")}
-      >
-        Weekly
-      </IonText>
+    <>
+    {data1.hourly  && (
+      <>
+      <div id="forecast">
+        <IonText
+          className="hourly__title f"
+          // className={
+          //   activeTab === "hourly" ? "active hourly__title f " : "hourly__title f"
+          // }
+          onClick={() => setActiveTab("hourly")}
+        >
+          Hourly
+        </IonText>
+        <IonText
+          className="weekly__title f"
+          // className={
+          //   activeTab === "weekly" ? "active weekly__title f " : "weekly__title f"
+          // }
+          onClick={() => setActiveTab("weekly")}
+        >
+          Weekly
+        </IonText>
 
+        {activeTab === "hourly" && data1 && (
+          <Hourly data1={data1} data2={data2} />
+        )}
+        {activeTab === "weekly" && data1 &&(
+        <Weekly data1={data1} data2={data2} />)}
 
-        {activeTab === "hourly" && <Hourly />}
-        {activeTab === "weekly" && <Weekly />}
-
-
-      {/* <IonGrid id="forecast" class="">
+        {/* <IonGrid id="forecast" class="">
   <IonRow class="forecast-container">
     <IonCol class="hourly" >
       <Hourly />
@@ -55,7 +57,10 @@ const Forecasts = ({ data1, data2 }) => {
     </IonCol>
   </IonRow>
 </IonGrid> */}
-    </div>
+      </div>
+      </>
+    )}
+    </>
   );
 };
 

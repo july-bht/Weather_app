@@ -85,7 +85,7 @@ const Home = () => {
   // }
 
   return (
-    <IonPage className="bg">
+    <IonPage>
       <IonContent data1={data} data2={dataWeather}  fullscreen>
         
         <>

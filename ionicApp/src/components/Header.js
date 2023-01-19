@@ -6,6 +6,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
+import Moment from "react-moment";
 
 import { useEffect, useState } from "react";
 const Header = ({ data1, data2 }) => {
@@ -26,7 +27,7 @@ const Header = ({ data1, data2 }) => {
           <IonRow className="header__row t">
 
             <IonCol size="auto">{locationName}</IonCol>
-            <IonCol size="auto">{data2 && currentDate(data2.dt)}</IonCol>
+            <IonCol size="auto"><Moment unix format="dddd">{data2 && (data2.dt)}</Moment></IonCol>
 
           </IonRow>
         </IonGrid>

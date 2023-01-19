@@ -4,6 +4,7 @@ const Cloud = () => {
   return (
   
     <svg
+    className='cloud'
     width="65"
     height="45"
     viewBox="0 0 68 48"
